@@ -1,0 +1,24 @@
+
+body {
+    height: 100vh;
+    margin: 100px;
+    background-color: #b4d7dd; 
+}
+.container {
+    display: flex;
+    gap: 10px;
+}
+.block {
+    width: 200px;
+    height: 100px;
+    color: white;
+}
+.red {
+    background-color: #ff0000;
+}
+.green {
+    background-color: #008000;
+}
+.blue {
+    background-color: #0000ff;
+}
