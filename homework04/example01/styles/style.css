@@ -12,6 +12,7 @@ header, main, footer{
     align-items: center;
     justify-content: center;
 }
+
 header, footer{
     height: 150px;
     background-color: rgb(175, 175, 231);
