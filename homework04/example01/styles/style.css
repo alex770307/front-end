@@ -19,7 +19,7 @@ header, footer{
 }
 
 main{
-    height: 750px;
+    height: 75vh;
     background-color: rgb(43, 226, 125);
     margin: 10px 0 20px;
 }
