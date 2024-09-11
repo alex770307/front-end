@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 50px;
+}
+
+.inner {
+    background-color: rgb(101, 128, 168);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-width: 2px;
+    border-color: rgb(14, 2, 2);
+    border-style:dotted ;
+    border-radius: 10px;
+    
+}
+
+.inner2 {
+    background-color: rgb(37, 50, 228);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.external {
+    background-color: rgb(0, 255, 255);
+    width: 600px;
+   
+
+    /* padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; */
+
+    padding: 10px;
+    margin: 10px;
+
+    border-width: 10px;
+    border-color: rgb(2, 2, 48);
+    border-style:dashed;
+    border-radius: 10px;
+    
+    /* для всех 4 */
+
+    /* padding: 10px 10px; */
+    /* 1 - для верха и низа
+    2 - для левой и правой стороны */
+
+    /* padding: 10px 10px 10px; */
+    /* 1 - для верха
+    2 - для левой и правой стороны
+    3 - для низа */
+
+    /* padding: 10px 10px 10px 10px; */
+    /* по часовой стрелке - верх право низ лево */
+}

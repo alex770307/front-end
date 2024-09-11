@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+header, main, footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header, footer{
+    height: 150px;
+    background-color: rgb(175, 175, 231);
+}
+
+main{
+    height: 750px;
+    background-color: rgb(43, 226, 125);
+    margin: 10px 0 20px;
+}
