@@ -4,16 +4,25 @@
     box-sizing: border-box;
 }
 
+.block{
+    background-color:black;
+    width: 1000px;
+    height: 150px;
+    display: block;
+    width: 30% ;
+    margin: 100px auto;
+    padding-top: 1px;
+    
+    
+}
+
 button{
     display: block;
-    margin: 100px auto;
-    padding: 30px 120px;
+    margin: 20px auto;
+     padding: 30px 150px; 
     background-color: blue;
     color: white;
     font-size: 34px;
-    border: solid 10px black;
-    border-left: solid 20px black;
-    border-bottom: solid 20px black;
-    border-radius: 3%;
-    
+    border-radius: 5%;
+   
 }
