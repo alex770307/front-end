@@ -4,25 +4,24 @@
     box-sizing: border-box;
 }
 
-.block{
-    background-color:black;
-    width: 1000px;
-    height: 150px;
-    display: block;
-    width: 30% ;
+.block {
+    background-color: black;
     margin: 100px auto;
-    padding-top: 1px;
-    
-    
+
+    width: 50vh;
+    height: 15vh;
+    display: block;
+
 }
 
-button{
+button {
     display: block;
-    margin: 20px auto;
-     padding: 30px 150px; 
+    margin: 100px auto;
+    width: 48vh;
+    height: 13vh;
     background-color: blue;
     color: white;
     font-size: 34px;
-    border-radius: 5%;
-   
+    border-radius: 25px;
+     border-width: 0; 
 }

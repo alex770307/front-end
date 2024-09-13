@@ -19,7 +19,8 @@ header, footer{
 }
 
 main{
-    height: 75vh;
+
+    height: calc(100vh - 330px);
     background-color: rgb(43, 226, 125);
     margin: 10px 0 20px;
 }

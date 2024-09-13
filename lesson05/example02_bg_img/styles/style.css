@@ -1,0 +1,29 @@
+.block_img {
+  height: 400px;
+  background-color: cornsilk;
+
+  background-image: url("../images/cat_gray.png");
+  background-repeat: repeat-x;
+  /* background-position: left center; */
+  background-position: center;
+  background-size: 25%;
+  position: relative;
+
+}
+
+.red {
+  background-image: url("../images/cat_yellow.png");
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center 100%;
+}
+
+.blue{
+  background-color: blue;
+  width: 30px;
+  height: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px; 
+}
