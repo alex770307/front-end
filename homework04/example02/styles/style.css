@@ -7,21 +7,25 @@
 .block {
     background-color: black;
     margin: 100px auto;
+    padding-top: 1vh;
+    padding-right: 1vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
 
     width: 50vh;
-    height: 15vh;
+    height: 13vh;
     display: block;
 
 }
 
 button {
     display: block;
-    margin: 100px auto;
-    width: 48vh;
-    height: 13vh;
+    margin: auto;
+    width: 47vh;
+    height: 10vh;
     background-color: blue;
     color: white;
     font-size: 34px;
-    border-radius: 25px;
-     border-width: 0; 
+    border-radius: 10px;
+    border-width: 0;
 }
