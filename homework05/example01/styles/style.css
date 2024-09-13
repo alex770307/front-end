@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  background-color: grey;
+  width: 60vh;
+  height: 100vh;
+  margin: 100px;
+  padding: 4px;
+  border: 2px solid;
+  border-color: #000;
+  border-radius: 5px;
+}
+
+.block {
+  background-color: yellow;
+  width: 16vh;
+  height: 7vh;
+  position: relative;
+  left: 42vh;
+  color: #000;
+  font-size: 36px;
+  border: 0;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
