@@ -6,7 +6,7 @@
   background-repeat: repeat-x;
   /* background-position: left center; */
   background-position: center;
-  background-size: 25%;
+  background-size: 40%;
   position: relative;
 
 }
@@ -16,7 +16,8 @@
   background-repeat: no-repeat;
   /* background-size: contain; */
   background-size: cover;
-  background-position: center 100%;
+  /* background-position: center 100%; */
+  background-position: bottom ;
 }
 
 .blue{
