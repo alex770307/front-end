@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: aquamarine;
+  height: 100px;
+}
+
+main {
+  height: auto;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.nav {
+  background-color: rgb(174, 164, 184);
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.section {
+  background-color: yellowgreen;
+}
+
+.article {
+  background-color: rgb(100, 144, 202);
+}
+
+.aside {
+  background-color: bisque;
+}
+
+footer {
+  background-color: aquamarine;
+  height: 100px;
+}
