@@ -2,39 +2,78 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 0px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+
+
 }
 
 header {
-  background-color: aquamarine;
+  background-color: rgb(127, 229, 255);
   height: 100px;
+  margin: 5px;
+  font-size: 36px;
+  padding: 15px;
 }
 
 main {
-  height: auto;
-  /* display: flex;
-  flex-direction: row; */
+  margin: 5px;
+  font-size: 24px;
 }
 
 .nav {
   background-color: rgb(174, 164, 184);
   height: 40px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+
+.container {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  gap: 5px;
+  flex-wrap: wrap;
+
+}
+
+.base {
+  display: flex;
+  flex-direction: column;
+  width: calc(80vh - 10px);
+  height: calc(50vh -300px);
+  gap: 5px;
+
 }
 
 .section {
   background-color: yellowgreen;
+  padding: 10px;
+  width: calc(80vh - 10px);
+  height: calc(50vh -300px);
 }
 
 .article {
   background-color: rgb(100, 144, 202);
+  padding: 10px;
+  width: calc(80vh - 10px);
+  height: calc(50vh -300px);
 }
 
 .aside {
   background-color: bisque;
+  height: calc(100vh - 300px);
+  width: calc(20vh - 10px);
+  padding: 10px;
 }
 
 footer {
   background-color: aquamarine;
   height: 100px;
+  margin: 5px;
+  font-size: 36px;
+  padding: 15px;
 }
