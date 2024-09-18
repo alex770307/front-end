@@ -6,8 +6,6 @@
   border-radius: 5px;
   text-align: center;
   align-items: center;
-
-
 }
 
 header {
@@ -19,7 +17,6 @@ header {
 }
 
 main {
-
   font-size: 24px;
 }
 
@@ -38,14 +35,13 @@ main {
   /* flex-wrap: wrap; */
   margin: 5px;
   gap: 5px;
-  
+
 }
 
 .base {
   display: flex;
   flex-direction: column;
   gap: 5px;
-
 }
 
 .section {
@@ -54,7 +50,6 @@ main {
   width: calc(100vh - 10px);
   height: calc(70vh - 300px);
   padding: 100px 0;
-  
 }
 
 .article {
