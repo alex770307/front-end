@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2px;
+    position: relative;
+    justify-content: center;
+
+}
+
+.cinema {
+    flex-grow: 1;
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    margin: 10px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.cinema_1 {
+
+    background-image: url(../images/11.webp);
+
+}
+
+.cinema_2 {
+    background-image: url(../images/club.webp);
+
+}
+
+.cinema_3 {
+    background-image: url(../images/forest.webp);
+}
+
+.cinema_4 {
+    background-image: url(../images/ghost.webp);
+}
+
+.cinema_5 {
+    background-image: url(../images/greenmile.webp);
+}
+
+.cinema_6 {
+    background-image: url(../images/shawshank.webp);
+}
+
+.block-text {
+    position: absolute;
+    /* Абсолютное позиционирование текста */
+    bottom: 0;
+    /* Текст внизу блока */
+    left: 0;
+    /* Текст слева */
+    color: white;
+    /* Цвет текста */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачный фон для текста */
+    padding: 5px;
+    /* Полисть для текста */
+    width: 100%;
+    /* Ширина блока с текстом */
+    text-align: center;
+    /* Текст по центру */
+    font-weight: bold;
+    /* Жирный текст */
+    text-align: justify;
+}
+.drama{
+    position: absolute;
+    font: black;
+    font-size: 12px;
+    background-color: yellow;
+    right: 5px;
+    top: 5px;
+    padding: 3px;
+
+}
+
+h1{
+    left: 10px;
+    position: relative;
+    text-align: left;
+
+}
+h2{
+    left: 10px;
+    position: relative;
+    text-align: left;
+    color: yellow;
+}
