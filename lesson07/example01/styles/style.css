@@ -7,32 +7,35 @@
 .container {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: initial;
     flex-direction: row;
     gap: 2px;
     position: relative;
     justify-content: center;
 
+    height: 100%;
 }
 
 .cinema {
     flex-grow: 1;
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
+    aspect-ratio: 3 / 4;
+    max-width: 80%;
     background-size: cover;
     margin: 10px;
     position: relative;
     background-repeat: no-repeat;
+
+    /* float: left; */
 }
 
 .cinema_1 {
-
     background-image: url(../images/11.webp);
-
 }
 
 .cinema_2 {
     background-image: url(../images/club.webp);
-
 }
 
 .cinema_3 {
@@ -53,26 +56,31 @@
 
 .block-text {
     position: absolute;
-    /* Абсолютное позиционирование текста */
+    box-sizing: border-box;
     bottom: 0;
-    /* Текст внизу блока */
     left: 0;
-    /* Текст слева */
     color: white;
-    /* Цвет текста */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Полупрозрачный фон для текста */
+    background: linear-gradient(to top, black 0%, transparent 100%);
+
+    /*opacity: 0.4;
+     background-color: rgba(0, 0, 0, 0.5);
+    Полупрозрачный фон для текста */
     padding: 5px;
-    /* Полисть для текста */
     width: 100%;
-    /* Ширина блока с текстом */
-    text-align: center;
-    /* Текст по центру */
-    font-weight: bold;
-    /* Жирный текст */
+    /*text-align: center;
+     Текст по центру */
+    font-weight: normal;
+
     text-align: justify;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-.drama{
+
+.drama {
     position: absolute;
     font: black;
     font-size: 12px;
@@ -83,13 +91,13 @@
 
 }
 
-h1{
+h1 {
     left: 10px;
     position: relative;
     text-align: left;
-
 }
-h2{
+
+h2 {
     left: 10px;
     position: relative;
     text-align: left;
