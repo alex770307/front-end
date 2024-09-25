@@ -5,7 +5,7 @@
   border: 0px;
   border-radius: 5px;
   text-align: center;
-  align-items: center;
+  
 }
 
 header {
@@ -31,8 +31,6 @@ main {
 .container {
   display: flex;
   flex-direction: row;
-
-align-items: stretch;
   margin: 5px;
   gap: 5px;
  
@@ -44,19 +42,12 @@ align-items: stretch;
   /* flex-grow: 6; */
   width: calc(100% / 7 * 6);
   gap: 5px;
- 
-  /* height: calc(100vh - 300px); */
 }
 
 .section {
   background-color: yellowgreen;
-  /* padding: 10px; */
   flex-grow: 1;
   width: 100%;
-
-  /* width: calc(100vh - 10px); */
-  /* height: calc(70vh - 300px); */
-  /* padding: 100px 0; */
 }
 
 .article {
@@ -64,19 +55,13 @@ align-items: stretch;
   padding: 10px;
   flex-grow: 1;
   width: 100%;
-
-  /* width: calc(100vh - 10px); */
-  /* height: calc(70vh - 300px); */
-  /* padding: 100px 0; */
 }
 
 .aside {
   background-color: bisque;
   height: calc(100vh - 300px);
-  /* width: calc(20vh - 10px); */
   /* flex-grow: 1; */
   width: calc(100% / 7);
-  /* padding: 100px 0; */
 }
 
 footer {
