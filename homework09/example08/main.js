@@ -14,9 +14,9 @@ function isPalindrome(word) {
 
 const array = ["Проверка,", "является", "ли", "научное", "название", "строка", "палиндромом.", "ПРИМЕР :", "ABCDEDCBA"];
 
-const [a,b,c,d,e,f,g,h,i] =array;
+const [a, b, c, d, e, f, g, h, i] = array;
 console.log();
-console.log(a,b,c,d,e,f,g,h,i);
+console.log(a, b, c, d, e, f, g, h, i);
 console.log();
 
 for (let i = 0; i < array.length; i++) {
