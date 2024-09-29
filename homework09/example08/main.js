@@ -7,12 +7,9 @@
 
 // Проверка на палиндром 
 function isPalindrome(word) {
-
-    const cleanedWord = word.replace(/[.,!?;:]/g, '').toLowerCase(); // Удаляем знаки пунктуации и приводим к нижнему регистру
-    return cleanedWord === cleanedWord.split('').reverse().join(''); // Проверяем, является ли слово палиндромом
 }
 
-const array = ["Проверка", "является", "ли", "научное", "название", "строка", "палиндромом", "ПРИМЕР :", "ABCDEDCBA"];
+const array = ["Проверка,", "является", "ли", "научное", "название", "строка", "палиндромом.", "ПРИМЕР :", "ABCDEDCBA"];
 
 const [a,b,c,d,e,f,g,h,i] =array;
 console.log();
