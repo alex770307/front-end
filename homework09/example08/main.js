@@ -12,7 +12,7 @@ function isPalindrome(word) {
     return cleanedWord === cleanedWord.split('').reverse().join(''); // Проверяем, является ли слово палиндромом
 }
 
-const array = ["Проверка,", "является", "ли", "научное", "название", "строка", "палиндромом.", "ПРИМЕР :", "ABCDEDCBA"];
+const array = ["Проверка,", "является", "ли", "научное", "название", "строка", "палиндромом.", "ПРИМЕР :", "abcdeDCBA"];
 
 const [a, b, c, d, e, f, g, h, i] = array;
 console.log();
