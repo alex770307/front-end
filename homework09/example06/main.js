@@ -5,25 +5,24 @@
 // Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота.
 
 const str = "Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота.";
-const firstWordsArray = str.split(" ");
+const cleanedString = str.replace(/[.,!?;:]/g, ''); 
+const wordsArray = cleanedString.split(" ");
 
-const firstWord = firstWordsArray[0].substring(0, 4);
-const secondWord = firstWordsArray[1];
-const thirdWord = firstWordsArray[2];
-const fourthWord = firstWordsArray[3];
-const fifthWord = firstWordsArray[4].substring(0, 8);
-const sixthWord = firstWordsArray[5];
-const seventhWord = firstWordsArray[6].substring(0, 7)
+const firstWord = wordsArray[0];
+const secondWord = wordsArray[1];
+const thirdWord = wordsArray[2];
+const fourthWord = wordsArray[3];
+const fifthWord = wordsArray[4];
+const sixthWord = wordsArray[5];
+const seventhWord = wordsArray[6];
 
 
 // Задание 7 (необязательное).
 // Перевернуть массив (аналог reverse).
-const secondWordsArray = [];
-secondWordsArray.push(firstWord, secondWord, thirdWord, fourthWord, fifthWord, sixthWord, seventhWord);
 
 const reversedArray = [];
-for (let i = secondWordsArray.length - 1; i > -1; i--) {
-    reversedArray.push(secondWordsArray[i]);
+for (let i = wordsArray.length - 1; i > -1; i--) {
+    reversedArray.push(wordsArray[i]);
 }
 
 const numbersArray = [50, 40, 30, 20, 10];
@@ -34,13 +33,10 @@ console.log();
 console.log("Исходная строка :                  " + str);
 
 console.log();
-console.log("Исходный мвссив :                  " + firstWordsArray);
+console.log("Исходный мвссив :                  " + wordsArray);
 
 console.log();
 console.log("По одному слову в строке :         " + firstWord, secondWord, thirdWord, fourthWord, fifthWord, sixthWord, seventhWord);
-
-console.log();
-console.log("Новый массив :                     " + secondWordsArray);
 
 console.log();
 console.log("Развёрнутый массив через цикл :    " + reversedArray);
