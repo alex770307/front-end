@@ -22,7 +22,7 @@ const secondWordsArray = [];
 secondWordsArray.push(firstWord, secondWord, thirdWord, fourthWord, fifthWord, sixthWord, seventhWord);
 
 const reversedArray = [];
-for (let i = secondWordsArray.length - 1; i >= 0; i--) {
+for (let i = secondWordsArray.length - 1; i > -1; i--) {
     reversedArray.push(secondWordsArray[i]);
 }
 
