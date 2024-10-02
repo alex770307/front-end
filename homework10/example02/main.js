@@ -5,11 +5,11 @@
 // Если число не целое - скруглить его в меньшую сторону
 // Функция должна вернуть квадрат этого числа
 
-const squareOfNumber =(n = 1)=> {
+const squareOfNumber = (n = 1) => {
     const result = n ** 2;
     return result;
 }
-const number = Math.floor(3.9);
+const number = Math.floor(4.9);
 const result = squareOfNumber(number);
 
 console.log("Квадрат числа " + number + " равен " + result);
