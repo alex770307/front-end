@@ -9,7 +9,7 @@
 // console.log(intersection([1, 5, 4, 2], [7, 12])); // должна вернуть [] 
 // console.log(intersection([1, 1, 0, 0, 0, 1, 5, 4, 2], [7, 12, 1, 1, 1, 1, 1, 0, 0, 0, 0])); // должна вернуть []
 
-function intersection(arr1, arr2) {
+const intersection = (arr1, arr2) => {
 
     const array = [];
 
