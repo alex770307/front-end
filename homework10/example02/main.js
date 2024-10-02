@@ -5,7 +5,7 @@
 // Если число не целое - скруглить его в меньшую сторону
 // Функция должна вернуть квадрат этого числа
 
-function squareOfNumber(n = 1) {
+const squareOfNumber =(n = 1)=> {
     const result = n ** 2;
     return result;
 }
