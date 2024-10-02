@@ -10,7 +10,7 @@
 
 // Первая функция не должна быть колбеком, просто рядом лежать, или даже внутри второй функции. На ваш выбор.
 
-function primeNumber(number = 1) {
+const primeNumber = (number = 1) => {
 
     if (number <= 1) {
         return false;

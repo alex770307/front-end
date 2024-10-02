@@ -5,7 +5,7 @@
 // Если число не целое - скруглить его в меньшую сторону
 // На заданном промежутке ф-ция должна найти и сложить все четные числа и вернуть сумму
 
-function sumOfEvenNumbers(a = 1, b = 1000) {
+const sumOfEvenNumbers = (a = 1, b = 1000) => {
     const start = Math.floor(a);
     const end = Math.floor(b);
     let result = 0;
