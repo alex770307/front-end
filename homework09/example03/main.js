@@ -7,7 +7,7 @@ for (let i = 0; i < 10; i++) {
     array.push(Math.floor(Math.random() * 75) + 1);
 }
 console.log();
-console.log("Array of 10 elements :  ", array);
+console.log("Array of 10 elements :  ", ...array);
 
 //используем оператор распространения `...`
 const maxNumber = Math.max(...array);

@@ -7,9 +7,9 @@ for (let i = 0; i < 10; i++) {
     array.push(Math.round(Math.random() * 50));
 }
 console.log();
-console.log("Array of 10 elements :  ", array);
+console.log("Array of 10 elements :           ", ...array);
 
 const arrayFirst = array.shift();
 array.push(arrayFirst);
 console.log();
-console.log("Modified array of 10 elements :  ", array);
+console.log("Modified array of 10 elements :  ", ...array);
