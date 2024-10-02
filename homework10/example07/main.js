@@ -14,23 +14,27 @@ function intersection(arr1, arr2) {
     const array = [];
 
     if (arr1.length > arr2.length) {
+
         for (let i = 0; i < arr1.length; i++) {
+
             if (arr1[i] === arr2[i]) {
                 array.push(arr1[i]);
-                // count++;
             }
         }
+
     } else {
+
         for (let i = 0; i < arr2.length; i++) {
+
             if (arr1[i] === arr2[i]) {
                 array.push(arr1[i]);
-                // count++;
             }
         }
     }
 
     return array;
 }
+
 console.log(intersection([10, 8, 45, 64, 2, 5, 7, 20], [1, 8, 0, 64, 7, 5, 6, 20, 56, 100]));
 console.log("----------------------------------------");
 console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // должна вернуть [4, 1] 
