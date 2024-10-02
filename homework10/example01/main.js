@@ -13,5 +13,5 @@ function evenOrOddNumber(number = 0) {
         return "odd";
     }
 }
-const number = Math.floor(11.59999);
+const number = Math.floor(12.59999);
 console.log("Number "+number+" is "+evenOrOddNumber(number));
