@@ -6,10 +6,11 @@
 // Функция должна вернуть квадрат этого числа
 
 const squareOfNumber = (n = 1) => {
-    const result = n ** 2;
+    const number = Math.floor(n);
+    const result = number ** 2;
     return result;
 }
-const number = Math.floor(4.9);
+const number = 4.9;
 const result = squareOfNumber(number);
 
 console.log("Квадрат числа " + number + " равен " + result);

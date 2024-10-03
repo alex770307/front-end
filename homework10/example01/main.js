@@ -6,12 +6,13 @@
 // Функция должна вернуть строку 'even' если число четное
 // Функция должна вернуть строку 'odd' если число не четное
 
-function evenOrOddNumber(number = 0) {
+function evenOrOddNumber(n = 0) {
+    const number = Math.floor(n);
     if (number % 2 === 0) {
         return "even";
     } else {
         return "odd";
     }
 }
-const number = Math.floor(12.59999);
-console.log("Number "+number+" is "+evenOrOddNumber(number));
+const number = 11.59999;
+console.log("Number " + number + " is " + evenOrOddNumber(number));
