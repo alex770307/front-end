@@ -12,19 +12,19 @@
 const intersection = (arr1, arr2) => {
 
     const arr = [];
-   
+
 
     for (let i = 0; i < arr1.length; i++) {
 
         for (let j = 0; j < arr2.length; j++) {
-            
-                if (arr1[i] === arr2[j] ) {
-                    arr.push(arr2[j]);
-                }  
+
+            if (arr1[i] === arr2[j]) {
+                arr.push(arr2[j]);
+            }
         }
 
     }
-   const uniArr = [...new Set(arr)];
+    const uniArr = [...new Set(arr)];
     return uniArr;
 
 
@@ -32,7 +32,7 @@ const intersection = (arr1, arr2) => {
 
 
 
-console.log(intersection([10, 45, 8, 64, 2, 5, 7, 20], [1, 8, 0, 64, 7, 5, 6, 20, 56, 100]));
+console.log(intersection([10, 45, 8, 64, 47, 2, 5, 7, 20], [1, 8, 0, 64, 7, 5, 6, 20, 56, 100, 47, 45]));
 console.log("----------------------------------------");
 console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // должна вернуть [4, 1] 
 console.log("----------------------------------------");
