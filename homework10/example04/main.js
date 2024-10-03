@@ -41,5 +41,5 @@ const n = Math.round(100.45);
 const array = allPrimeNumbers(n);
 
 console.log("Число \"n\" равно  " + n);
-console.log("Просеые числа в промежутке от 1 до указанного числа \"n\" :");
+console.log("Простые числа в промежутке от 1 до указанного числа \"n\" :");
 console.log(...array);
