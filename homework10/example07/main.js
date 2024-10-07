@@ -10,35 +10,21 @@
 // console.log(intersection([1, 1, 0, 0, 0, 1, 5, 4, 2], [7, 12, 1, 1, 1, 1, 1, 0, 0, 0, 0])); // должна вернуть [1, 0]
 
 const intersection = (arr1, arr2) => {
+    const setArr2 = new Set(arr2); // Конвертируем arr2 в Set для быстрого поиска
+    const result = [];
 
-    const array = [];
-
-    if (arr1.length > arr2.length) {
-
-        for (let i = 0; i < arr1.length; i++) {
-            
-            if (arr1[i] === arr2[i]) {
-                array.push(arr1[i]);
-            }
-        }
-
-    } else {
-
-        for (let i = 0; i < arr2.length; i++) {
-
-            if (arr1[i] === arr2[i]) {
-                array.push(arr1[i]);
-            }
+    for (let i = 0; i < arr1.length; i++) {
+        // Проверяем, содержится ли элемент arr1[i] в Set arr2
+        if (setArr2.has(arr1[i]) && !result.includes(arr1[i])) {
+            result.push(arr1[i]); // Добавляем элемент в результат, если его там еще нет
         }
     }
 
-    return array;
+    return result; // Возвращаем массив с уникальными элементами
 }
 
-console.log(intersection([10, 8, 45, 64, 2, 5, 7, 20], [1, 8, 0, 64, 7, 5, 6, 20, 56, 100]));
-console.log("----------------------------------------");
-console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // должна вернуть [4, 1] 
-console.log("----------------------------------------");
-console.log(intersection([1, 5, 4, 2], [7, 12])); // должна вернуть [] 
-console.log("----------------------------------------");
+// Протестируем
+console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // должна вернуть [4, 1]
+console.log(intersection([1, 5, 4, 2], [7, 12])); // должна вернуть []
 console.log(intersection([1, 1, 0, 0, 0, 1, 5, 4, 2], [7, 12, 1, 1, 1, 1, 1, 0, 0, 0, 0])); // должна вернуть [1, 0]
+console.log(intersection([10, 45, 8, 64, 2, 5, 7, 20], [1, 8, 0, 64, 7, 5, 6, 20, 56, 100])); 
