@@ -20,3 +20,16 @@ const objectToObject = (obj) => {
 
 const objectTypes = objectToObject(JohnDoe);
 console.log(objectTypes);
+
+
+
+const objectToValuesObject = (obj) => {
+    const object = {};
+    Object.keys(obj).forEach(key => {
+        object[key] = typeof obj[key];
+    });
+    return object;
+}
+
+const typesOfObjects = objectToValuesObject(JohnDoe);
+console.log(typesOfObjects);
