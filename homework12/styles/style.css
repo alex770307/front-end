@@ -1,0 +1,35 @@
+.header {
+    text-align: center;
+    color: blue;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+   
+}
+.result {
+    font-size: 20px;
+    margin-top: 10px;
+    color: blueviolet;
+    
+}
+
+.category {
+    font-size: 18px;
+    margin-top: 10px;
+    color: green;
+}
+
+input#height{
+    background-color:rgb(230, 247, 241);
+    text-align: center;
+}
+
+input#weight{
+    background-color:rgb(230, 247, 241);
+    text-align: center;
+}
