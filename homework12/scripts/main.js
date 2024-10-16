@@ -7,14 +7,19 @@ const inputElements = document.querySelectorAll('input');
 
 buttonElement.addEventListener('click', buttonClickHandler);
 
-function buttonClickHandler(){
-   
+function buttonClickHandler() {
+
     let height = inputElements[0].value;
     let weight = inputElements[1].value;
-    
-    let bmi = +weight / (+height * +height);
-    resultElement.textContent = bmi;
-    categoryElement.textContent = getBMICategory(bmi);
+
+    if (height > 0 && weight > 0) {
+        let bmi = Math.round(+weight / ((+height / 100) ** 2));
+        resultElement.textContent = bmi;
+        categoryElement.textContent = getBMICategory(bmi);
+    } else {
+        resultElement.textContent = 'Пожалуйста, введите корректные значения.';
+        categoryElement.textContent = '';
+    }
 }
 
 function getBMICategory(bmi) {
