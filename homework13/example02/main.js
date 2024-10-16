@@ -27,12 +27,14 @@ let players = [
     {name: "Paul", height: 174, weight: 69, sport: "hockey"},
     {name: "Roman", height: 184, weight: 78, sport: "football"}
     ];
+
+      const filterPlayersHegher180 = (human) => {
+        if (human.height >= 180 && human.weight < 80) {
+            return true
+        } else {
+            return false
+        }
+    }
+    const playersHegher180 = players.filter(filterPlayersHegher180);
+    console.log(playersHegher180);
     
-    const addGoalsFunction = (human) => {
-        const resultObj = { ...human };
-       
-        resultObj['goals'] = Math.floor(Math.random() * 21);
-        return resultObj;
-      };
-      const playersWithGoals = players.map(addGoalsFunction);
-      console.log(playersWithGoals);
