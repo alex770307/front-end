@@ -34,14 +34,14 @@ const addGoalsFunction = (human) => {
     resultObj['goals'] = Math.floor(Math.random() * 21);
     return resultObj;
 };
+
 const playersWithGoals = players.map(addGoalsFunction);
 
 const sortedByGoals = playersWithGoals.sort((start, next) => {
     return start.goals - next.goals;
-    //     if(a.goals < b.goals) return -1;
-    //     if(a.goals > b.goals) return 1;
-    //     return 0;
+    
 });
+
 console.log(sortedByGoals);
 
 
