@@ -11,8 +11,10 @@ const array = ['a', 36.6, 'John Doe'];
 const arrayToObject = (arr) => {
     const res = {};
     arr.forEach(element => {
-        const key = String(element);
-        res[key] = element;
+        // const key = String(element);
+        // res[key] = element;
+ // или так:       
+        res[element] = element;
     });
     return res;
 }

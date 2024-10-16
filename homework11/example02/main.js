@@ -13,8 +13,10 @@ const array = [
 const arrayToObject = (arr) => {
     const res = {};
     arr.forEach(element => {
-        const [key, value] = element;
-        res[key] = value;
+         const [key, value] = element;
+         res[key] = value;
+// или так:
+        // res[element[0]] = element[1];
     });
     return res;
 }
