@@ -19,10 +19,10 @@ const JohnDoe = {
 
 const objectToComplexObject = (obj) => {
     const object = {};
-    for(let key in obj){
+    for (let key in obj) {
         const argument = obj[key];
         const typeFromArgument = typeof argument;
-        object[key]= {value: argument, type: typeFromArgument}
+        object[key] = { value: argument, type: typeFromArgument }
     }
     return object;
 }
