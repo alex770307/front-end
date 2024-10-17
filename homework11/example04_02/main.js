@@ -19,11 +19,13 @@ const JohnDoe = {
 
 const objectToComplexObject = (obj) => {
     const object = {};
-    for (let key in obj) {
+    Object.keys(obj).forEach(key => {
         const argument = obj[key];
         const typeFromArgument = typeof argument;
         object[key] = { value: argument, type: typeFromArgument }
-    }
+    });
+
+
     return object;
 }
 
