@@ -29,15 +29,15 @@ let players = [
 
 const sortedArray = (arr, str) => {
 
-    const lowerStr = str.toUpperCase();
+    const upperStr = str.toUpperCase();
 
     const filteredPlayers = arr.filter(
         (player) => {
-            return player.name.startsWith(lowerStr);
+            return player.name.startsWith(upperStr);
         });
     return filteredPlayers;
 }
 
-console.log(sortedArray(players, "d"));
+console.log(sortedArray(players, "g"));
 console.log(sortedArray(players, "N"));
 console.log(sortedArray(players, "e"));
