@@ -22,15 +22,15 @@ const links = [
     },
   ];
 
-  const AllElements = document.querySelector('ul');
+  const ul = document.querySelector('ul');
 
-  links.forEach(createAndAddLinks);
-
-  function createAndAddLinks(element) {
-    const newLinkElement = document.createElement('li');
-    const href = document.createElement('li')
-    newLinkElement.textContent = element.text;
-    href.textContent = element.href;
-    newLinkElement.append(href);
-    AllElements.append(newLinkElement);
+  const createAndAddLinks = (link) => {
+    const li = document.createElement('li');
+    const a = document.createElement('a')
+    li.textContent = link.text;
+    a.href = link.href;
+    li.append(a);
+    ul.append(li);
   }
+  
+  links.forEach(createAndAddLinks);
