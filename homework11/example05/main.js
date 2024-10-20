@@ -25,8 +25,10 @@ const calculateCost = (bucket, products) => {
         const quantity = bucket[product];
 
         for (let warehouse in products) {
-                const price = products[warehouse][product];
+            const price = products[warehouse][product];
+            if (price) { 
                 totalKost += quantity * price;
+            }
         }
     }
     return totalKost;
@@ -34,3 +36,27 @@ const calculateCost = (bucket, products) => {
 
 const total = calculateCost(bucket, products);
 console.log(total);
+
+const getSumm = (basket, prices) => {
+    let allPricesInOne = {}
+    const arrOfWarehousesNames = Object.keys(prices);
+    arrOfWarehousesNames.forEach(
+        (warehouseName) => {
+            allPricesInOne = {   ...prices[warehouseName],  ...allPricesInOne   }
+        }
+    );
+
+    let summ = 0;
+
+    const arrayOfProductsInBasket = Object.keys(basket);
+    arrayOfProductsInBasket.forEach(
+        (product) => {
+            summ = summ + (basket[product] * allPricesInOne[product]);
+        }
+    );
+
+    return summ;
+
+}
+const sum = getSumm(bucket, products);
+console.log(sum);

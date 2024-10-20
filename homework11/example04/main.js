@@ -4,16 +4,15 @@
 // { a: 'a', '36.6': 36.6, 'John Doe': 'John Doe' } ==> { a: 'string', '36.6': 'number', 'John Doe': 'string' }
 
 const JohnDoe = {
-    name: 'John Doe',
-    age: 36,
-    city: 'London',
-    anonymous: true
+    name: 'John Doe', age: 36, city: 'London', anonymous: true
 };
+
+const object = { a: 45, b: true, c: 'abc' };
 
 const objectToObject = (obj) => {
     const object = {};
     for (let key in obj) {
-        object[key] = typeof obj[key];
+        object[key] = {value: obj[key], type: typeof obj[key]};
     }
     return object;
 }
@@ -21,15 +20,13 @@ const objectToObject = (obj) => {
 const objectTypes = objectToObject(JohnDoe);
 console.log(objectTypes);
 
-
-
 const objectToValuesObject = (obj) => {
     const object = {};
     Object.keys(obj).forEach(key => {
-        object[key] = typeof obj[key];
+        object[key] = { value: obj[key], type: typeof obj[key] };
     });
     return object;
 }
 
-const typesOfObjects = objectToValuesObject(JohnDoe);
+const typesOfObjects = objectToValuesObject(object);
 console.log(typesOfObjects);
