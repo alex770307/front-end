@@ -15,5 +15,5 @@ const getCenturies = (arr) => {
     return newArr;
 }
 
-const res = getCenturies(years);
-console.log(res);
+const centuries = getCenturies(years);
+console.log(centuries);
