@@ -5,8 +5,6 @@
 // которые соответствуют обоим критериям. 
 // Рекомендуется использовать метод filter. 
 
-// Пример работы функции:
-
 const people = [
     { firstName: 'Lee', lastName: 'Haverbeke' },
     { firstName: 'Clara', lastName: 'Aernoudts' },
