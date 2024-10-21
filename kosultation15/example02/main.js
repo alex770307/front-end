@@ -18,7 +18,7 @@ const people = [
 
 const filterPeople = (arr) => {
 
-    const newArr = [...arr].filter(
+    const newArr = arr.filter(
 
         (human) => {
             return (human.firstName.length <= 4 && human.lastName.length > 8)

@@ -5,7 +5,7 @@
 const years = [1900, 1899, 2001, 2000, 1455, 14];
 
 const getCenturies = (arr) => {
-    const newArr = [...arr].map(
+    const newArr = arr.map(
 
         (num) => {
             return Math.ceil(num / 100);
