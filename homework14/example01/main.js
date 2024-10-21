@@ -27,13 +27,13 @@ let players = [
     { name: "Roman", height: 184, weight: 78, sport: "football" }
 ];
 
-const sortedArray = (arr, str) => {
+const sortedArray = (arr, letter) => {
 
-    const upperStr = str.toUpperCase();
+    const upperLetter = letter.toUpperCase();
 
     const filteredPlayers = arr.filter(
         (player) => {
-            return player.name.startsWith(upperStr);
+            return player.name.startsWith(upperLetter);
         });
     return filteredPlayers;
 }
