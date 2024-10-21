@@ -24,13 +24,17 @@ const links = [
 
   const ul = document.querySelector('ul');
 
-  const createAndAddLinks = (link) => {
+const createAndAddLinks = (arr) => {
+  const linksArr = arr.map(
+    (link) => {
     const li = document.createElement('li');
     const a = document.createElement('a')
     li.textContent = link.text;
     a.href = link.href;
     li.append(a);
     ul.append(li);
-  }
-  
-  links.forEach(createAndAddLinks);
+    })
+  return linksArr;
+}
+
+createAndAddLinks(links);
