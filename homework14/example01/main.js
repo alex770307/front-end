@@ -9,7 +9,7 @@
 //чтобы были только обьекты где имя начинается на букву, 
 //которая переданна вторым аргументом.
 
-let players = [
+const players = [
     { name: "Alex", height: 190, weight: 85, sport: "rugby" },
     { name: "Boris", height: 180, weight: 75, sport: "football" },
     { name: "Vladimir", height: 175, weight: 70, sport: "hockey" },
@@ -27,6 +27,18 @@ let players = [
     { name: "Roman", height: 184, weight: 78, sport: "football" }
 ];
 
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const letters = 'ADGKMORZbeilnpv';
+
+const getRandomLetter = (str) => {
+    
+    const randomIndex = Math.floor(Math.random() * str.length);
+    return str[randomIndex]; 
+}
+
+const randomLetter = getRandomLetter(letters);
+
+
 const sortedArray = (arr, letter) => {
 
     const upperLetter = letter.toUpperCase();
@@ -38,6 +50,7 @@ const sortedArray = (arr, letter) => {
     return filteredPlayers;
 }
 
-console.log(sortedArray(players, "g"));
-console.log(sortedArray(players, "N"));
-console.log(sortedArray(players, "e"));
+
+console.log(getRandomLetter(randomLetter)); 
+console.log(sortedArray(players, randomLetter));
+
