@@ -51,6 +51,6 @@ const sortedArray = (arr, letter) => {
 }
 
 
-console.log(getRandomLetter(randomLetter)); 
+console.log(randomLetter); 
 console.log(sortedArray(players, randomLetter));
 
