@@ -29,9 +29,9 @@ buttonStatus.addEventListener("click", chooseStatus);
 function chooseStatus(buttonAll) {
     const filteredTasks = array1.filter(
         (task) => {
-            if (buttonAll === buttonCompleted) return true;
-            if (buttonAll === buttonUncompleted) return false;
-        
+            if (buttonAll === buttonCompleted) return task.buttonCompleted;
+            if (buttonAll === buttonUncompleted) return task.buttonUncompleted;
+            return true;
         }
     )
    
