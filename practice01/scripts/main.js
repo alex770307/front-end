@@ -8,7 +8,6 @@ const taskList = document.querySelector('.list');
 
 let tasks = [];
 
-// Функция для отрисовки задач
 function renderTasks(filter) {
     taskList.innerHTML = '';
     let filteredTasks = tasks;
@@ -28,7 +27,6 @@ function renderTasks(filter) {
         }
         li.textContent = task.text;
 
-        // Обработчик клика для переключения состояния задачи
         li.addEventListener('click', () => {
             task.isCompleted = !task.isCompleted;
             renderTasks(filter);
@@ -38,7 +36,6 @@ function renderTasks(filter) {
     });
 }
 
-// Обработчик нажатия кнопки "Создать"
 createButton.addEventListener('click', () => {
     const taskText = taskInput.value.trim();
     if (taskText) {
@@ -48,10 +45,8 @@ createButton.addEventListener('click', () => {
     }
 });
 
-// Обработчики для кнопок фильтрации
 allButton.addEventListener('click', () => renderTasks('all'));
 completedButton.addEventListener('click', () => renderTasks('completed'));
 uncompletedButton.addEventListener('click', () => renderTasks('uncompleted'));
 
-// Изначальная отрисовка задач (пока пусто)
 renderTasks('all');
