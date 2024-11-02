@@ -32,10 +32,6 @@
     background-color: rgb(134, 185, 203);
 }
 
-.btn_hidden{
-    display: none;
-}
-
 .task-input {
     height: 32px;
     border-radius: 4px;
