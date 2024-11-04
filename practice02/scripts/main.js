@@ -9,7 +9,7 @@ let allTasks = [];
 
 function addElement() {
     const taskText = taskInput.value;
-    const obj = { key: taskText, value: null };
+    const obj = { key: taskText, value: false };
     allTasks.push(obj);
     renderTasks(); // обновить отображение списк задач
     taskInput.value = ''; // очистить поле ввода
