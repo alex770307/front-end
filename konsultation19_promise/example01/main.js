@@ -3,7 +3,7 @@ const buttonElement = document.querySelector('.btn');
 const avatarElement = document.querySelector('#avatar');
 const nameElement = document.querySelector('#name');
 
-buttonElement.addEventListener('click', () => {
+buttonElement.addEventListener('click', (userLogin) => {
     const inputValue = inputElement.value;
 
     const getUserInfo = async () => {
