@@ -3,10 +3,10 @@ const buttonElement = document.querySelector('.btn');
 const avatarElement = document.querySelector('#avatar');
 const nameElement = document.querySelector('#name');
 
-buttonElement.addEventListener('click', (userLogin) => {
+buttonElement.addEventListener('click', () => {
     const inputValue = inputElement.value;
 
-    const getUserInfo = async () => {
+    const getUserInfo = async (userLogin) => {
         try {
             const response = await fetch(`https://api.github.com/users/${inputValue}`);
             if (!response.ok) throw new Error('User not found');
