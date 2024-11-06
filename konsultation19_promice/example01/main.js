@@ -6,7 +6,7 @@ const nameElement = document.querySelector('#name');
 buttonElement.addEventListener('click', () => {
     const inputValue = inputElement.value;
     nameElement.append(inputValue);
-});
+
 
 fetch("https://api.github.com/users/facebook")
     .then((response) => {
@@ -15,10 +15,10 @@ fetch("https://api.github.com/users/facebook")
     })
     .then((data) => {
 
-        doSomethingWidhData(data)
+        updateUserData(data)
     })
-
-function doSomethingWidhData(facebook) {
+});
+function updateUserData(facebook) {
     console.log(facebook);
     console.log(facebook.avatar_url);
     console.log(facebook.name)

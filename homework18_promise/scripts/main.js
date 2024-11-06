@@ -9,11 +9,11 @@ fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => {
         return response.json();
     })
-    .then((data) => {
-        doSomethingWidhData(data)
+    .then((body) => {
+        writeElement(body)
     });
 
-function doSomethingWidhData(todos) {
+function writeElement(todos) {
     allTasks = todos.slice(0, 15).map(element => (
         { title: element.title, completed: element.completed }));
     renderTasks();
