@@ -5,8 +5,8 @@ const nameElement = document.querySelector('#name');
 
 buttonElement.addEventListener('click', () => {
     const inputValue = inputElement.value;
-    const getUserInfo = async (userLogin) => {
-    const response = await fetch(`https://api.github.com/users/${inputValue}`)
+    const getUserInfo = async () => {
+    const response = await fetch(`https://api.github.com/users/${inputValue}`);
     const userInfo = await response.json();
 
         updateUserData(userInfo);
