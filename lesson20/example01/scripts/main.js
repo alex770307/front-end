@@ -16,6 +16,7 @@ const getWeather = async () => {
         date.current.condition.icon
     );
 };
+
 getWeather();
 function displayInfoAboutWeather(localtime, name, temp_c, text, icon) {
     const cityContext = document.querySelector(".city-text");
@@ -29,27 +30,40 @@ function displayInfoAboutWeather(localtime, name, temp_c, text, icon) {
     const conditionContent = document.querySelector("#weather");
     conditionContent.textContent = text;
 }
+
+
 const getWeekWeather = async () => {
     const response = await fetch(
         `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`
     );
     const date = await response.json();
-    //console.log(date);
+    console.log(date);
 
     getData(date); // передаем date в getData
 
-    function getData(weatherData) {
-        const allDay = weatherData.forecast.forecastday.map((element) => {
+};
+getWeekWeather();
+
+function getData(weatherData) {
+    const allDay = weatherData.forecast.forecastday.map(
+        (element) => {
             return {
-                dete: element.astro.date,
+                date: element.date,
                 icon: element.day.condition.icon,
                 maxtemp_c: element.day.maxtemp_c,
                 mintemp_c: element.day.mintemp_c
             };
         });
-        console.log(allDay);
-    };
+    console.log(allDay);
 
-
+    setData(allDay);
 };
-getWeekWeather();
+
+function setData(allDay) {
+    const weekDayBlock = document.querySelector('.weekDay-block');
+    weekDayBlock.innerHTML = '';
+
+    allDay.forEach((dayData) => {
+        
+    });
+}
