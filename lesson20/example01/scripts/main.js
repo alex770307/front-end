@@ -29,7 +29,7 @@ function displayInfoAboutWeather(localtime, name, temp_c, text, icon) {
     iconContent.src = icon;
     const conditionContent = document.querySelector("#weather");
     conditionContent.textContent = text;
-}
+};
 
 
 const getWeekWeather = async () => {
@@ -39,8 +39,7 @@ const getWeekWeather = async () => {
     const date = await response.json();
     console.log(date);
 
-    getData(date); // передаем date в getData
-
+    getData(date);
 };
 getWeekWeather();
 
@@ -64,6 +63,40 @@ function setData(allDay) {
     weekDayBlock.innerHTML = '';
 
     allDay.forEach((dayData) => {
-        
+        const dayDiv = document.createElement('div');
+        dayDiv.classList.add('day');
+
+        const iconDiv = document.createElement('div');
+        iconDiv.classList.add('icon-small');
+        const imgElement = document.createElement('img');
+        imgElement.src = dayData.icon;
+        iconDiv.append(imgElement);
+        dayDiv.append(iconDiv);
+
+        const weekDayDiv = document.createElement('div');
+        weekDayDiv.classList.add('weekDay');
+        const weekDayText = document.createElement('p');
+        weekDayText.classList.add('text-weekDay');
+        weekDayText.textContent = dayData.date;
+        weekDayDiv.append(weekDayText);
+        dayDiv.append(weekDayDiv);
+
+        const temperatureMaxDiv = document.createElement('div');
+        temperatureMaxDiv.classList.add('temperature-max');
+        const maxTempText = document.createElement('p');
+        maxTempText.classList.add('temperature-max-text');
+        maxTempText.textContent = dayData.maxtemp_c;
+        temperatureMaxDiv.append(maxTempText);
+        dayDiv.append(temperatureMaxDiv);
+
+        const temperatureMinDiv = document.createElement('div');
+        temperatureMinDiv.classList.add('temperature-min');
+        const minTempText = document.createElement('p');
+        minTempText.classList.add('temperature-min-text');
+        minTempText.textContent = dayData.mintemp_c;
+        temperatureMinDiv.append(minTempText);
+        dayDiv.append(temperatureMinDiv);
+
+        weekDayBlock.append(dayDiv);
     });
-}
+};

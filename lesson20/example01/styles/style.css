@@ -34,8 +34,6 @@ p {
     font-weight: 300;
 }
 
-/* .city {} */
-
 .city-text {
     font-size: 24px;
     font-weight: 900;
@@ -49,8 +47,6 @@ p {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-/* .weather-condition {} */
 
 .weather-text {
     font-size: 24px;
@@ -102,7 +98,7 @@ p {
     height: 33px;
 }
 
-.text-weekDay {
+.temperature-min-text {
     color: #fff;
     font-weight: 300;
 }
