@@ -41,7 +41,7 @@ const getWeekWeather = async () => {
     function getData(weatherData) {
         const allDay = weatherData.forecast.forecastday.map((element) => {
             return {
-dete:element.astro.date,
+                dete: element.astro.date,
                 icon: element.day.condition.icon,
                 maxtemp_c: element.day.maxtemp_c,
                 mintemp_c: element.day.mintemp_c
@@ -50,6 +50,6 @@ dete:element.astro.date,
         console.log(allDay);
     };
 
-  
+
 };
 getWeekWeather();
