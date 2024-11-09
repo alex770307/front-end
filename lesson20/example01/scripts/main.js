@@ -70,8 +70,10 @@ function setData(allDay) {
         iconDiv.classList.add('icon-small');
         const imgElement = document.createElement('img');
         imgElement.src = dayData.icon;
+        imgElement.alt = '';
+        imgElement.height = 50;
         iconDiv.append(imgElement);
-        dayDiv.append(iconDiv);
+        // dayDiv.append(iconDiv);
 
         const weekDayDiv = document.createElement('div');
         weekDayDiv.classList.add('weekDay');
@@ -79,7 +81,7 @@ function setData(allDay) {
         weekDayText.classList.add('text-weekDay');
         weekDayText.textContent = dayData.date;
         weekDayDiv.append(weekDayText);
-        dayDiv.append(weekDayDiv);
+        //dayDiv.append(weekDayDiv);
 
         const temperatureMaxDiv = document.createElement('div');
         temperatureMaxDiv.classList.add('temperature-max');
@@ -87,7 +89,7 @@ function setData(allDay) {
         maxTempText.classList.add('temperature-max-text');
         maxTempText.textContent = dayData.maxtemp_c;
         temperatureMaxDiv.append(maxTempText);
-        dayDiv.append(temperatureMaxDiv);
+        //dayDiv.append(temperatureMaxDiv);
 
         const temperatureMinDiv = document.createElement('div');
         temperatureMinDiv.classList.add('temperature-min');
@@ -95,7 +97,8 @@ function setData(allDay) {
         minTempText.classList.add('temperature-min-text');
         minTempText.textContent = dayData.mintemp_c;
         temperatureMinDiv.append(minTempText);
-        dayDiv.append(temperatureMinDiv);
+
+        dayDiv.append(iconDiv, weekDayDiv, temperatureMaxDiv, temperatureMinDiv);
 
         weekDayBlock.append(dayDiv);
     });
