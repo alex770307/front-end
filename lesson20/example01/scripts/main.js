@@ -3,7 +3,8 @@ const apiKey = "96b98ba93246419b8da174841240711";
 let city = "Berlin";
 
 const getWeather = async () => {
-    const callWeatherData = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
+    const callWeatherData = 
+    `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
     const response = await fetch(callWeatherData);
     const weatherData = await response.json();
 
@@ -17,8 +18,8 @@ const getWeather = async () => {
         weatherData.current.condition.icon
     );
 };
-
 getWeather();
+
 function displayInfoAboutWeather(localtime, name, temp_c, text, icon) {
     const cityContext = document.querySelector(".city-text");
     cityContext.textContent = name;
@@ -43,9 +44,8 @@ const getWeekWeather = async () => {
 };
 getWeekWeather();
 
-
 function getData(weatherData) {
-    const allDay = weatherData.forecast.forecastday.map(
+    const allWeekDays = weatherData.forecast.forecastday.map(
         (element) => {
             const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
             const newDate = new Date(element.date);
@@ -56,9 +56,8 @@ function getData(weatherData) {
                 mintemp_c: element.day.mintemp_c
             };
         });
-    console.log(allDay);
-
-    setData(allDay);
+    console.log(allWeekDays);
+    setData(allWeekDays);
 };
 
 function setData(allDay) {
