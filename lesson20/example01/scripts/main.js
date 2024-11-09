@@ -2,6 +2,15 @@ const apiKey = "96b98ba93246419b8da174841240711";
 
 let city = "Berlin";
 
+const applyGeoLocation = async () => {
+    const callGeoLocation = 'https://get.geojs.io/v1/ip/geo.json';
+    const response = await fetch(callGeoLocation);
+    const cityName = await response.json();
+    city = cityName.city
+    getWeather();
+}
+applyGeoLocation();
+
 const getWeather = async () => {
     const callWeatherData = 
     `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
@@ -45,8 +54,10 @@ const getWeekWeather = async () => {
 getWeekWeather();
 
 function getData(weatherData) {
-    const allWeekDays = weatherData.forecast.forecastday.map(
-        (element) => {
+    const currentDate = new Date(); 
+    const allWeekDays = weatherData.forecast.forecastday
+    //.filter(element =>)
+    .map(element => {
             const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
             const newDate = new Date(element.date);
             return {
