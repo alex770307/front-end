@@ -60,11 +60,11 @@ function getData(weatherData) {
     setData(allWeekDays);
 };
 
-function setData(allDay) {
+function setData(allWeekDays) {
     const weekDayBlock = document.querySelector('.weekDay-block');
     weekDayBlock.innerHTML = '';
 
-    allDay.forEach((dayData) => {
+    allWeekDays.forEach((dayData) => {
         const dayDiv = document.createElement('div');
         dayDiv.classList.add('day');
 
