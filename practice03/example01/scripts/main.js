@@ -45,7 +45,7 @@ const getWeekWeather = async (city) => {
     const response = await fetch(callWeekWeatherData);
     const weekTemperatureData = await response.json();
     getData(weekTemperatureData);
-    console.log(weekTemperatureData);
+    //console.log(weekTemperatureData);
 };
 
 function getData(weatherData) {
@@ -53,9 +53,10 @@ function getData(weatherData) {
         .slice(1, 7)
         .map(element => {
             const newDate = new Date(element.date);
-            const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+            const daysOfWeek = new Intl.DateTimeFormat('en-US', { weekday: 'short' }).format(newDate);
+            
             return {
-                weekDay: daysOfWeek[newDate.getDay()],
+                weekDay: daysOfWeek,
                 icon: element.day.condition.icon,
                 maxtemp_c: element.day.maxtemp_c,
                 mintemp_c: element.day.mintemp_c
