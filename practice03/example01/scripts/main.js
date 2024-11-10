@@ -54,7 +54,6 @@ function getData(weatherData) {
         .map(element => {
             const newDate = new Date(element.date);
             const daysOfWeek = new Intl.DateTimeFormat('en-US', { weekday: 'short' }).format(newDate);
-            
             return {
                 weekDay: daysOfWeek,
                 icon: element.day.condition.icon,
